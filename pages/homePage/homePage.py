@@ -9,13 +9,15 @@ class HomePage(BasePage):
 
     def __init__(self, driver):
         super().__init__(driver)
-        # self.open("uk/")
         self.navBar = NavigationBar(self.driver)
+
+    def open_page(self):
+        self.open("uk/")
+        return self
 
     def open_login_page(self):
         self.navBar.click_on_login_button()
         return LoginPage(self.driver)
-
 
     def open_conversations_page(self):
         self.navBar.click_on_conversations_link()

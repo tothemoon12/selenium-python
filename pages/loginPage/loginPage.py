@@ -1,9 +1,8 @@
 from selenium.webdriver.common.by import By
 
 from seleniumPython.data.user_provider import get_user
+from seleniumPython.pages.account.account_page import AccountPage
 from seleniumPython.pages.base_page import BasePage
-from seleniumPython.pages.homePage.homePage import HomePage
-
 
 class LoginPage(BasePage):
     USER_NAME_INPUT_LOCATOR = (By.XPATH, '//input[@name=\'username\']')
@@ -28,4 +27,4 @@ class LoginPage(BasePage):
 
     def click_login(self):
         self.find_element(*self.LOGIN_BUTTON_LOCATOR).click()
-        return HomePage(self.driver)
+        return AccountPage(self.driver)

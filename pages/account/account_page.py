@@ -11,6 +11,6 @@ class AccountPage(BasePage):
         self.driver = driver
 
     def get_header_title(self):
-        self.wait_element(*self.PAGE_TITLE_LOCATOR)
+        self._wait_element(*self.PAGE_TITLE_LOCATOR)
 
-        return self.find_element(*self.PAGE_TITLE_LOCATOR).text
+        return self._find_element(*self.PAGE_TITLE_LOCATOR).text

@@ -14,17 +14,17 @@ class LoginPage(BasePage):
 
     def enter_credentials(self, user_name):
         user = get_user(user_name)
-        self.wait_element(*self.USER_NAME_INPUT_LOCATOR)
+        self._wait_element(*self.USER_NAME_INPUT_LOCATOR)
         self.enter_username(user['email'])
         self.enter_password(user['password'])
         return self
 
     def enter_username(self, email):
-        self.find_element(*self.USER_NAME_INPUT_LOCATOR).send_keys(email)
+        self._find_element(*self.USER_NAME_INPUT_LOCATOR).send_keys(email)
 
     def enter_password(self, password):
-        self.find_element(*self.USER_PASSWORD_INPUT_LOCATOR).send_keys(password)
+        self._find_element(*self.USER_PASSWORD_INPUT_LOCATOR).send_keys(password)
 
     def click_login(self):
-        self.find_element(*self.LOGIN_BUTTON_LOCATOR).click()
+        self._find_element(*self.LOGIN_BUTTON_LOCATOR).click()
         return AccountPage(self.driver)

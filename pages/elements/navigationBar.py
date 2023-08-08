@@ -11,12 +11,12 @@ class NavigationBar(BasePage):
     CONVERSATIONS_LOCATOR = (By.ID, 'nav-conversations')
 
     def wait_for_nav_bar_present(self):
-        self.wait_element(*self.NAVIGATION_CONTAINER_BY)
+        self._wait_element(*self.NAVIGATION_CONTAINER_BY)
 
     def click_on_login_button(self):
         self.wait_for_nav_bar_present()
-        self.find_element(*self.LOGIN_BUTTON_PATH).click()
+        self._find_element(*self.LOGIN_BUTTON_PATH).click()
 
     def click_on_conversations_link(self):
         self.wait_for_nav_bar_present()
-        self.find_element(*self.CONVERSATIONS_LOCATOR).click()
+        self._find_element(*self.CONVERSATIONS_LOCATOR).click()

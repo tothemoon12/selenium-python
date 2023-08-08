@@ -1,4 +1,4 @@
-#!/Users/tsvilikhovskiy/Learn/selenium-python/selenium-python/env/bin/python3.11
+#!/Users/tsvilikhovskiy/Learn/seleniumPython/seleniumPython/env/bin/python3.11
 # -*- coding: utf-8 -*-
 import re
 import sys
